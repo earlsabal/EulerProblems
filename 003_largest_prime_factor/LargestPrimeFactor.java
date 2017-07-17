@@ -19,7 +19,7 @@ public class LargestPrimeFactor {
 	}
 
 	public boolean isPrime(int num, ArrayList<Integer> primes) {
-		for (int prime : primes){
+		for (int prime : primes) {
 			if (num % prime == 0) { return false; }
     }
     return true;
@@ -27,9 +27,7 @@ public class LargestPrimeFactor {
 
 	public long reduceNum(int divisor, long num) {
 		long newNum = num;
-		while (newNum % divisor == 0) {
-			newNum = newNum / divisor;
-		}
+		while (newNum % divisor == 0) { newNum = newNum / divisor; }
 		return newNum;
 	}
 

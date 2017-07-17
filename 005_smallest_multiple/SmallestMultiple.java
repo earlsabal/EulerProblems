@@ -9,8 +9,9 @@ public class SmallestMultiple {
 	}
 
 	public boolean isMultiple(int number,int max) {
-		for (int i = max; i > 0; i--)
+		for (int i = max; i > 0; i--) {
 			if (number % i != 0) { return false; }
+		}
 		return true;
 	}
 
