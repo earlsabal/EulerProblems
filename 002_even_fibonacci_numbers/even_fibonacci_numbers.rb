@@ -13,6 +13,7 @@ def sum_of_evens(max)
 	sum
 end
 
+# Tracks time
 start = Time.now
 puts sum_of_evens(4000000)
 # Answer: 4613732

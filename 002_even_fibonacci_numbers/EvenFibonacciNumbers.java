@@ -21,9 +21,11 @@ public class EvenFibonacciNumbers {
 		EvenFibonacciNumbers test = new EvenFibonacciNumbers();
 		System.out.println(test.sumOfEvens(4000000));
 		// Answer: 4613732
+
     long elapsedTime = System.nanoTime() - startTime;
     double seconds = (double)elapsedTime / 1000000000.0;
     System.out.println(seconds);
     // Time Elasped: 0.000761384
+    
   }
 }

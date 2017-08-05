@@ -17,3 +17,4 @@ start = Time.now
 puts sum_of_multiples(1000)
 puts Time.now - start
 # Answer: 233168
+# Time Elapsed: 0.001
