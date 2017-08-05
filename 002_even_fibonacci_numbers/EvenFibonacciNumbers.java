@@ -6,7 +6,7 @@ public class EvenFibonacciNumbers {
 		
 		int sum = 0;
 		while (currentNum <= max) {
-			if ( nextNum % 2 == 0 ) { sum += nextNum; }
+			if (nextNum % 2 == 0) { sum += nextNum; }
 			nextNum = previous + currentNum;
 			previous = currentNum;
 			currentNum = nextNum;
@@ -15,7 +15,15 @@ public class EvenFibonacciNumbers {
 	}
 
 	public static void main(String[] args) {
+
+		long startTime = System.nanoTime();
+
 		EvenFibonacciNumbers test = new EvenFibonacciNumbers();
 		System.out.println(test.sumOfEvens(4000000));
+		// 4613732
+    long elapsedTime = System.nanoTime() - startTime;
+    double seconds = (double)elapsedTime / 1000000000.0;
+    System.out.println(seconds);
+    // 0.000761384
   }
 }
