@@ -20,10 +20,10 @@ public class EvenFibonacciNumbers {
 
 		EvenFibonacciNumbers test = new EvenFibonacciNumbers();
 		System.out.println(test.sumOfEvens(4000000));
-		// 4613732
+		// Answer: 4613732
     long elapsedTime = System.nanoTime() - startTime;
     double seconds = (double)elapsedTime / 1000000000.0;
     System.out.println(seconds);
-    // 0.000761384
+    // Time Elasped: 0.000761384
   }
 }

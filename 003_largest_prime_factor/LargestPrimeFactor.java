@@ -32,7 +32,17 @@ public class LargestPrimeFactor {
 	}
 
 	public static void main(String[] args) {
+
+		long startTime = System.nanoTime();
+
 		LargestPrimeFactor test = new LargestPrimeFactor();
 		System.out.println(test.largestPrime(600851475143L));
+		// Answer: 6857
+
+		long elapsedTime = System.nanoTime() - startTime;
+    double seconds = (double)elapsedTime / 1000000000.0;
+    System.out.println(seconds);
+    // Time Elasped: 0.010580432
+
   }
 }
