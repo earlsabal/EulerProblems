@@ -3,11 +3,7 @@
 def sum_of_multiples(below_num)
   sum = 0
   for i in 0...below_num do
-    if i % 3 == 0
-      sum += i
-    elsif i % 5 == 0
-      sum += i
-    end
+    sum += i if i % 3 == 0 || i % 5 == 0
   end
   sum
 end
