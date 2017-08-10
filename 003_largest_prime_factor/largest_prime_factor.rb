@@ -3,15 +3,19 @@ def largest_prime_factor(num)
 	primes_list = find_all_primes(num)
 	largest_prime = primes_list.last
 
+	largest_prime
+
 end
 
 def find_all_primes(max)
 
 	primes = []
 
-	for i in 2..max
-		primes << i if prime?(i, primes)
-		max = reduce_num(i, max)
+	current_number = 2
+	while current_number <= max
+		primes << current_number if prime?(current_number, primes)
+		max = reduce_num(current_number, max)
+		current_number += 1
 	end
 
 	primes
@@ -20,21 +24,19 @@ end
 
 def prime?(number, primes)
 
+	status = true
 	primes.each do |prime|
-		return false if number % prime == 0
+		status = false if number % prime == 0
 	end
 	
-	true
+	status
 
 end
 
 def reduce_num(divisor, number)
 
 	new_number = number
-	while (new_number % divisor == 0)
-		new_number = new_number / divisor
-	end
-
+	new_number = new_number / divisor while new_number % divisor == 0 
 	new_number
 
 end
@@ -44,4 +46,4 @@ start = Time.now
 puts largest_prime_factor(600851475143)
 # Answer: 6857
 puts "Execution time: #{Time.now - start}"
-# Time Elasped: 
+# Time Elasped: 0.405119
