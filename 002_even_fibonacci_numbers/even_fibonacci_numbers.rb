@@ -9,9 +9,13 @@ def sequence(previous, current, evens_sum, limit)
 
 	return evens_sum if current >= limit
 	sum = previous + current
-	sum % 2 == 0 ? new_sum = evens_sum + sum : new_sum = evens_sum
+	even?(sum) ? new_sum = evens_sum + sum : new_sum = evens_sum
 	sequence(current, sum, new_sum, limit)
 
+end
+
+def even?(number)
+	number % 2 == 0 ? true : false
 end
 
 # Tracks time
