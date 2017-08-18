@@ -1,21 +1,19 @@
-def sum_of_evens(max)
-	previous = 1
-	current_num = 2
-	next_num = 2
+def sum_of_evens(limit)
+	previous, current, start_sum = [0, 1, 0]
+	sequence(previous, current, start_sum, limit)
+end
 
-	sum = 0
-	while current_num <= max 
-		sum += next_num if next_num % 2 == 0
-		next_num = previous + current_num
-		previous = current_num
-		current_num = next_num
-	end
-	sum
+def sequence(previous, current, current_sum, limit)
+	return current_sum if current >= limit
+	sum = previous + current
+	sum % 2 == 0 ? new_sum = current_sum + sum : new_sum = current_sum
+	sequence(current, sum, new_sum, limit)
 end
 
 # Tracks time
 start = Time.now
 puts sum_of_evens(4000000)
-# Answer: 4613732
 puts "Execution time: #{Time.now - start}"
-# Time Elasped: 0.000088637
+
+# Answer: 4613732
+# Time Elasped: 0.000048
